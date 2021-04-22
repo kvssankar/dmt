@@ -50,8 +50,8 @@
       document.getElementById("cal1").onclick = function () {
         var n = +document.getElementById("n1").value;
         var m = +document.getElementById("m1").value;
-        var ans = Math.log2(n / m);
-        var ans2 = -(n / m) * Math.log2(n / m);
+        var ans = Math.log2(n / m).toFixed(3);
+        var ans2 = (-(n / m) * Math.log2(n / m)).toFixed(3);
         document.getElementById("ans1").innerHTML = ans + " , " + ans2;
       };
     </script>
