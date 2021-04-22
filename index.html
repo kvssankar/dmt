@@ -51,7 +51,8 @@
         var n = +document.getElementById("n1").value;
         var m = +document.getElementById("m1").value;
         var ans = Math.log2(n / m);
-        document.getElementById("ans1").innerHTML = ans;
+        var ans2 = -(n / m) * Math.log2(n / m);
+        document.getElementById("ans1").innerHTML = ans + " , " + ans2;
       };
     </script>
 
