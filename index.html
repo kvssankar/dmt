@@ -35,6 +35,17 @@
       <button class="btn btn-primary btn-sm" id="cal1">submit</button>
       <br />
       <p id="ans1"></p>
+      X1 : <input type="number" id="x1" />
+      <br />
+      Y1 : <input type="number" id="y1" />
+      <br />
+      X2 : <input type="number" id="x2" />
+      <br />
+      Y2 : <input type="number" id="y2" />
+      <br />
+      <button class="btn btn-primary btn-sm" id="cal2">submit</button>
+      <br />
+      <p id="ans2"></p>
     </div>
 
     <script>
@@ -53,6 +64,14 @@
         var ans = Math.log2(n / m).toFixed(3);
         var ans2 = (-(n / m) * Math.log2(n / m)).toFixed(3);
         document.getElementById("ans1").innerHTML = ans + " , " + ans2;
+      };
+      document.getElementById("cal2").onclick = function () {
+        var x1 = +document.getElementById("x1").value;
+        var y1 = +document.getElementById("y1").value;
+        var x2 = +document.getElementById("x2").value;
+        var y2 = +document.getElementById("y2").value;
+        var ans = Math.sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));
+        document.getElementById("ans2").innerHTML = ans;
       };
     </script>
 
